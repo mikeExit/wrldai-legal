@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WrldAI Instagram Publisher — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e1c1b; background: #f7f4f1;
+  }
+  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .updated { color: #6b6460; margin: 0 0 2rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  code { background: rgba(0,0,0,.06); padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+  hr { border: 0; border-top: 1px solid #e8e3df; margin: 2.5rem 0 1.25rem; }
+  footer { color: #6b6460; font-size: .9rem; }
+  a { color: #c2410c; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e3df; background: #1e1c1b; }
+    .updated, footer { color: #b8b0ac; }
+    code { background: rgba(255,255,255,.1); }
+    hr { border-top-color: #3a3634; }
+    a { color: #f5a623; }
+  }
+</style>
+</head>
+<body>
+
+<h1>WrldAI Instagram Publisher — Privacy Policy</h1>
+<p class="updated"><strong>Last updated: 24 July 2026</strong></p>
+
+<p>This policy covers the <strong>WrldAI Instagram Publisher</strong>, a private
+internal tool used by its operator to publish content to their own Instagram
+Business account. It is not a public service and has no end users other than the
+account owner.</p>
+
+<h2>What the app accesses</h2>
+<p>Through the Instagram Graph API, and only for the connected account:</p>
+<ul>
+  <li><strong>Basic account information</strong> — account id, username and
+      account type (permission: <code>instagram_business_basic</code>). Used to
+      confirm the connection is valid before publishing.</li>
+  <li><strong>Content publishing</strong> — uploads and publishes video (Reels)
+      that the operator has created and explicitly approved (permission:
+      <code>instagram_business_content_publish</code>).</li>
+  <li><strong>Metrics on its own posts</strong> — aggregate like and comment
+      counts, timestamp and permalink, used to review the performance of content
+      it published.</li>
+</ul>
+
+<h2>What the app stores</h2>
+<ul>
+  <li>A long-lived access token and the Instagram user id, held in a local
+      environment file on the operator's own machine. Nothing is stored on a
+      hosted server, shared database or third-party service.</li>
+  <li>Nothing else. The app does not collect, store or process personal data
+      belonging to any other Instagram user, follower or commenter. It reads
+      only aggregate counts on its own posts, never individual identities.</li>
+</ul>
+
+<h2>Sharing</h2>
+<p>No data is sold, rented, shared with advertisers, or transferred to any third
+party. The application contains no analytics or tracking SDKs.</p>
+
+<h2>Retention and revocation</h2>
+<p>The access token expires after 60 days unless refreshed. Access can be revoked
+at any time from Instagram → <em>Settings → Apps and websites</em>, which
+immediately and permanently ends the application's access.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:michaelmanueddu@gmail.com">michaelmanueddu@gmail.com</a></p>
+
+<hr>
+<footer>This policy describes the Instagram publishing tool only. The ExitAI
+mobile application is a separate product with its own privacy policy.</footer>
+
+</body>
+</html>
