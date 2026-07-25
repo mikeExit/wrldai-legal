@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXIT Social Publisher — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e1c1b; background: #f7f4f1;
+  }
+  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 .25rem; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .6rem; }
+  .updated { color: #6b6460; margin: 0 0 2rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  code { background: rgba(0,0,0,.06); padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+  .note { border-left: 3px solid #c2410c; padding: .6rem 0 .6rem 1rem; margin: 1.5rem 0; background: rgba(194,65,12,.05); }
+  hr { border: 0; border-top: 1px solid #e8e3df; margin: 2.5rem 0 1.25rem; }
+  footer { color: #6b6460; font-size: .9rem; }
+  a { color: #c2410c; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e3df; background: #1e1c1b; }
+    .updated, footer { color: #b8b0ac; }
+    code { background: rgba(255,255,255,.1); }
+    .note { background: rgba(245,166,35,.08); border-left-color: #f5a623; }
+    hr { border-top-color: #3a3634; }
+    a { color: #f5a623; }
+  }
+</style>
+</head>
+<body>
+
+<h1>EXIT Social Publisher — Privacy Policy</h1>
+<p class="updated"><strong>Last updated: 25 July 2026</strong></p>
+
+<p>This policy covers the <strong>EXIT Social Publisher</strong>, a private internal tool used
+by its operator to publish content to their own social media accounts on
+Instagram and LinkedIn. EXIT is a smoking-cessation mobile app. This tool publishes marketing content about EXIT to EXIT's own social accounts. It is not a public service, it is not
+distributed to anyone, and it has no end users other than the account
+owner.</p>
+
+<div class="note">
+<p><strong>This policy does not cover the EXIT mobile app itself.</strong> The EXIT mobile app is a separate product with its own users and its own privacy policy. Nothing in this document describes the app, and this tool has no access to any app user's data.</p>
+</div>
+
+<h2>What the tool accesses</h2>
+
+<p><strong>Instagram</strong>, through the official Instagram API, and only for
+the connected account:</p>
+<ul>
+  <li><strong>Basic account information</strong> — account id, username and
+      account type (permission: <code>instagram_business_basic</code>). Used to
+      confirm the connection is valid before publishing.</li>
+  <li><strong>Content publishing</strong> — uploads and publishes Reels, feed
+      images and Stories that the operator has created and explicitly approved
+      (permission: <code>instagram_business_content_publish</code>).</li>
+  <li><strong>Metrics on its own posts</strong> — aggregate like and comment
+      counts, timestamp and permalink, used to review the performance of
+      content it published.</li>
+</ul>
+
+<p><strong>LinkedIn</strong>, through the official LinkedIn API, and only for
+the connected profile or Page:</p>
+<ul>
+  <li><strong>Identity verification</strong> — the authenticated member's own
+      identifier, read once via OpenID Connect (<code>/v2/userinfo</code>)
+      purely to confirm the access token is still valid before publishing.</li>
+  <li><strong>Content publishing</strong> — creates text posts that the
+      operator has written and explicitly approved (permission:
+      <code>w_member_social</code> for a personal profile, or
+      <code>w_organization_social</code> when publishing as a Company
+      Page).</li>
+</ul>
+
+<h2>Nothing publishes without explicit approval</h2>
+<p>Every publish is gated. The tool refuses to send anything to any platform
+unless a matching human approval has been recorded first; without one it writes
+a proposal for review and makes no network call at all. There is no automatic,
+scheduled or unattended posting.</p>
+
+<h2>Images are published to a public URL</h2>
+<p>The Instagram API can only publish a still image from a publicly reachable
+URL — it fetches the file itself rather than accepting an upload. Images
+intended for Instagram are therefore first uploaded to a public GitHub
+repository so that Instagram can retrieve them, which means <strong>any image
+published through this tool is publicly accessible at that URL</strong>. Only
+finished marketing images the operator has approved for publication are ever
+placed there. Videos (Reels) are uploaded directly to Instagram and are not
+hosted publicly by this tool.</p>
+
+<h2>What the tool stores</h2>
+<ul>
+  <li>Access tokens and the account identifiers they belong to — the Instagram
+      user id, and the LinkedIn author URN — held in a local environment file
+      on the operator's own machine. Nothing is stored on a hosted server,
+      shared database or third-party service.</li>
+  <li>A local record of what was published and when, kept on the same machine
+      so the operator can review their own activity.</li>
+  <li>Nothing else. The tool does not collect, store or process personal data
+      belonging to any other Instagram or LinkedIn user, follower or
+      visitor.</li>
+</ul>
+
+<h2>What the tool never does</h2>
+<ul>
+  <li>It does not read, collect or store other people's profiles, followers,
+      connections, comments, direct messages or contact details.</li>
+  <li>It does not sell, share, rent or transfer any data to anyone.</li>
+  <li>It does not use any data for advertising, profiling or training.</li>
+  <li>It does not use any automation that acts on behalf of other users, and it
+      does not access any account other than the operator's own.</li>
+</ul>
+
+<h2>Retention and deletion</h2>
+<p>Tokens live only in the operator's local environment file and are removed by
+deleting them from it. Access can be revoked at any time from the Instagram or
+LinkedIn account settings, which immediately and permanently ends this tool's
+ability to access or publish to that account. Because no data about any other
+person is collected, there is no third-party data to delete; any request
+concerning data held by this tool can be sent to the contact address below and
+will be actioned.</p>
+
+<h2>Children</h2>
+<p>This tool is an internal operator utility. It is not directed at children and
+collects no data from anyone, including children.</p>
+
+<h2>Changes</h2>
+<p>If what the tool accesses or stores changes, this page is updated and the
+date at the top changes with it.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:michaelmanueddu@gmail.com">michaelmanueddu@gmail.com</a></p>
+
+<hr>
+<footer>EXIT Social Publisher — operated privately by its owner. This page is published for
+the Instagram and LinkedIn platform review processes.</footer>
+
+</body>
+</html>
