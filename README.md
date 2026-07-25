@@ -12,10 +12,9 @@ Base URL: `https://mikeexit.github.io/wrldai-legal/`
 | Page | URL | Used by |
 |---|---|---|
 | `legal.html` | `…/legal.html` | Human index of every policy below |
-| `exit/index.html` | `…/exit/` | EXIT's Meta app + LinkedIn app → **Privacy Policy URL** |
+| `index.html` | `…/` | **EXIT**'s Meta app + LinkedIn app → **Privacy Policy URL**. This URL is already submitted to Meta, so it stays put; LinkedIn coverage was folded into it rather than opening a second page for the same product. |
 | `juice/index.html` | `…/juice/` | JUICE OS's Meta app + LinkedIn app → **Privacy Policy URL** |
 | `wrldai/index.html` | `…/wrldai/` | WrldAI's Meta app + LinkedIn app → **Privacy Policy URL** |
-| `index.html` | `…/` | The original combined publisher policy. **Kept as-is** — a Meta app already references this URL and breaking it would fail review. |
 
 One policy per product, each covering both Instagram and LinkedIn for that
 product's own accounts. A separate repository per app is **not** required:
@@ -32,9 +31,10 @@ Two disclosures matter and must not be dropped:
 - **Images become public.** Instagram publishes stills only from a publicly
   fetchable URL, so images are uploaded to a public assets repo first. The
   policies say so plainly.
-- **Each product's own product is out of scope.** The EXIT *mobile app* in
-  particular has its own users and needs its **own** privacy policy; these
-  pages cover only the publishing tool.
+- **Each product's own product is out of scope.** The EXIT *mobile app* has
+  its own users and its own separate privacy policy
+  (`ExitAppModern/docs/privacy-policy.md`); these pages cover only the
+  publishing tool and must not be confused with it.
 
 If what the tool accesses or stores changes, update the affected page and the
 date at its top.
